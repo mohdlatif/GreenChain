@@ -1,0 +1,37 @@
+@import 'theme.css';
+@import 'utility-patterns.css';
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+html[class*='dark'] body {
+  @apply bg-zinc-950;
+}
+
+[x-cloak=''] {
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}

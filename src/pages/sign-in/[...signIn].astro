@@ -1,0 +1,49 @@
+---
+import { SignIn } from '@clerk/astro/components'
+
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout title="Sign in">
+  <!-- Hero -->
+  <section>
+    <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
+      <!-- Particles animation -->
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <canvas
+          data-particle-animation
+          data-particle-quantity="8"
+          data-particle-staticity="30"></canvas>
+      </div>
+
+      <!-- Illustration -->
+      <div
+        class="pointer-events-none absolute inset-0 -z-10 -mx-28 overflow-hidden rounded-b-[3rem]"
+        aria-hidden="true"
+      >
+        <div class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2">
+          <img
+            src="./images/glow-bottom.svg"
+            class="max-w-none"
+            width="2146"
+            height="774"
+            alt="Hero Illustration"
+          />
+        </div>
+      </div>
+
+      <div class="pb-16 pt-32 md:pb-32 md:pt-52">
+        <!-- Hero content -->
+        <div class="mx-auto max-w-3xl text-center">
+          <div class="mb-6" data-aos="fade-down">
+            <div
+              class="relative inline-flex before:absolute before:inset-0 before:bg-purple-500 before:blur-md"
+            >
+              <SignIn path="/sign-in" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

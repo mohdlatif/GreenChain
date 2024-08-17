@@ -1,0 +1,39 @@
+{
+  "css.customData": [".vscode/tailwind.json"],
+  "css.lint.unknownAtRules": "ignore",
+  "editor.codeActionsOnSave": {
+    // "source.fixAll.eslint": "always",
+    "source.fixAll": "always"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "astro",
+    "toml",
+    "json",
+    "jsonc",
+    "json5"
+  ],
+  "javascript.validate.enable": false,
+  "scss.lint.unknownAtRules": "ignore",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  // "[yaml]": {
+  //   "editor.defaultFormatter": "kachick.vscode-yamlfmt"
+  // },
+  // "[github-actions-workflow]": {
+  //   "editor.defaultFormatter": "kachick.vscode-yamlfmt"
+  // },
+  "yaml.schemas": {
+    // https://github.com/github/vscode-github-actions/issues/195#issuecomment-1570218818
+    "https://json.schemastore.org/github-workflow.json": [
+      "*.github/workflows/*.yaml",
+      "*.github/workflows/*.yml"
+    ],
+    "https://json.schemastore.org/github-action.json": [
+      "action.yaml",
+      "action.yml"
+    ]
+  }
+}

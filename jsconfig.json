@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json.schemastore.org/jsconfig",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "baseUrl": ".", // this one forces use import.meta.env.['CLOUD_NAME'] instead of import.meta.env.CLOUD_NAME
+    "declaration": true,
+    "downlevelIteration": true,
+    "emitDeclarationOnly": false,
+    "esModuleInterop": true,
+    "exactOptionalPropertyTypes": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    // "module": "ES2022", // or "es2020", "es2022", "system", "node16", "nodenext"
+    // Enable latest features
+    "lib": ["ESNext", "DOM", "dom.iterable"],
+    "module": "ESNext",
+    "moduleDetection": "force",
+    // "checkJs": true,
+    // Bundler mode
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": false,
+    // Some stricter flags
+    "noUnusedLocals": false, // show yellow error when var is not used
+    "noUnusedParameters": false,
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@img/*": ["public/img/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "~/*": ["./*"]
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ],
+    "pretty": true,
+    "skipLibCheck": true,
+    // Best practices
+    "strict": true,
+    "stripInternal": true, //https://dev.to/deciduously/formdata-in-typescript-24cl (FormData in TypeScript)
+    "target": "ESNext",
+    "types": ["vite/client", "astro/client", "node", "astro/env"],
+    "verbatimModuleSyntax": true
+  },
+  "exclude": ["node_modules", "dist"],
+  "extends": "astro/tsconfigs/strict"
+}

@@ -1,0 +1,49 @@
+{
+  "elements": ["html5"],
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "attr-case": [
+      "warn",
+      {
+        "style": ["lowercase", "camelcase", "pascalcase"]
+      }
+    ],
+    "attr-quotes": ["off"],
+    "element-case": [
+      "off",
+      {
+        "style": ["lowercase", "camelcase", "pascalcase"]
+      }
+    ],
+    "element-name": [
+      "warn",
+      {
+        "whitelist": [
+          "Logo",
+          "Head",
+          "Logo",
+          "Map",
+          "Layout",
+          "Icon",
+          "Image",
+          "Cloudinary",
+          "Darkmode",
+          "ViewTransitions"
+        ]
+      }
+    ],
+    "element-required-content": "off",
+    "no-autoplay": "off",
+    "no-inline-style": "off",
+    "no-raw-characters": [
+      "off",
+      {
+        "relaxed": false
+      }
+    ],
+    "no-self-closing": "off",
+    "no-trailing-whitespace": "off",
+    "tel-non-breaking": "off",
+    "void-style": "off"
+  }
+}
