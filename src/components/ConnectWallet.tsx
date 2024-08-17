@@ -5,16 +5,27 @@ export default function AccountButton() {
   const [isConnected, setIsConnected] = useState(false)
   const [publicKey, setPublicKey] = useState('')
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   const dropdownRef = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
     checkConnection()
+    checkSessionCookie()
     document.addEventListener('mousedown', handleClickOutside)
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
+
+  const checkSessionCookie = () => {
+    // Check for the existence of a session cookie
+    // This is a simple example; you might need to adjust based on your actual cookie name
+    const sessionCookie = document.cookie
+      .split(';')
+      .some((item) => item.trim().startsWith('__session'))
+    setIsLoggedIn(sessionCookie)
+  }
 
   const checkConnection = async () => {
     const { isConnected } = await freighterApi.isConnected()
@@ -92,23 +103,28 @@ export default function AccountButton() {
       {isDropdownOpen && (
         <div className="absolute right-0 mt-1 w-48 rounded-md bg-[#1614174d] shadow-lg backdrop-blur-sm">
           <ul className="w-full space-y-2 p-2 text-sm font-medium text-slate-300 transition duration-150 ease-in-out">
-            <li className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white">
-              <a className="block" href="/sign-in">
-                Login
-              </a>
-            </li>
-
-            <li className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white">
-              <a className="block" href="/sign-up">
-                Signup
-              </a>
-            </li>
-            <button
-              className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white"
-              onClick={handleLogout}
-            >
-              Logout
-            </button>
+            {!isLoggedIn && (
+              <>
+                <li className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white">
+                  <a className="block" href="/sign-in">
+                    Login
+                  </a>
+                </li>
+                <li className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white">
+                  <a className="block" href="/sign-up">
+                    Signup
+                  </a>
+                </li>
+              </>
+            )}
+            {isLoggedIn && (
+              <button
+                className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white"
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+            )}
             <hr className="border-slate-600" />
             <button
               id="wallet-button"
