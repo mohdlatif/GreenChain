@@ -1,3 +1,44 @@
+---
+const sixlists = [
+  {
+    description:
+      'Easily log and monitor your daily sustainable actions, from recycling to energy conservation.',
+    icon: '📊',
+    name: 'Action Tracking',
+  },
+  {
+    description:
+      'Earn eco-tokens for your green efforts, redeemable for sustainable products or services.',
+    icon: '🏆',
+    name: 'Reward System',
+  },
+  {
+    description:
+      'See your personal and collective impact through intuitive graphs and real-time data.',
+    icon: '🌍',
+    name: 'Impact Visualization',
+  },
+  {
+    description:
+      'Leverage Stellar blockchain technology for secure, transparent, and automated reward distribution.',
+    icon: '🔗',
+    name: 'Smart Contracts',
+  },
+  {
+    description:
+      'Participate in eco-challenges, compete with friends, and contribute to larger sustainability goals.',
+    icon: '🤝',
+    name: 'Community Challenges',
+  },
+  {
+    description:
+      'Receive tailored suggestions to improve your sustainability score based on your habits and local opportunities.',
+    icon: '💡',
+    name: 'Personalized Insights',
+  },
+]
+---
+
 <section class="relative">
   <!-- Particles animation -->
   <div
@@ -18,12 +59,13 @@
         <h2
           class="h2 bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 bg-clip-text pb-4 text-transparent"
         >
-          Faster. Smarter.
+          Greener. Smarter.
         </h2>
         <p class="text-lg text-slate-400">
-          There are many variations available, but the majority have suffered
-          alteration in some form, by injected humour, or randomised words which
-          don't look even slightly believable.
+          EcoLedger revolutionizes how we track and reward sustainable actions.
+          By leveraging blockchain technology, we provide a transparent, secure,
+          and motivating platform for individuals to make a real impact on our
+          planet.
         </p>
       </div>
 
@@ -125,12 +167,13 @@
                         <h3
                           class="inline-flex bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 bg-clip-text pb-1 text-xl font-bold text-transparent"
                         >
-                          Optimized for security
+                          Optimized for Impact
                         </h3>
                         <p class="text-slate-400">
-                          Optimize for user experience and privacy. Use social
-                          login integrations, lower user friction, incorporate
-                          rich user profiling, and facilitate more transactions.
+                          Track your eco-friendly actions with ease, visualize
+                          your progress, and see how your efforts contribute to
+                          a greener planet. Our intuitive interface makes
+                          sustainability tracking simple and rewarding.
                         </p>
                       </div>
                     </div>
@@ -140,7 +183,7 @@
                         href="#0"
                       >
                         <span class="relative inline-flex items-center">
-                          Learn more <span
+                          Explore Features <span
                             class="ml-1 tracking-normal text-purple-500 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5"
                             >-&gt;</span
                           >
@@ -189,11 +232,13 @@
                       <h3
                         class="inline-flex bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 bg-clip-text pb-1 text-xl font-bold text-transparent"
                       >
-                        Extensibility
+                        Blockchain-Powered Rewards
                       </h3>
                       <p class="text-slate-400">
-                        Your login box must find the right balance between user
-                        convenience, privacy and security.
+                        Earn tokenized rewards for your sustainable choices. Our
+                        Stellar-based smart contracts ensure transparent and
+                        fair distribution of incentives, motivating you to
+                        maintain and improve your eco-friendly habits.
                       </p>
                     </div>
                   </div>
@@ -240,11 +285,12 @@
                       <h3
                         class="inline-flex bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 bg-clip-text pb-1 text-xl font-bold text-transparent"
                       >
-                        Infinite options
+                        Community-Driven Initiatives
                       </h3>
                       <p class="text-slate-400">
-                        Quickly apply filters to refine your issues lists and
-                        create custom views.
+                        Join challenges, share tips, and collaborate with
+                        like-minded individuals. EcoLedger's community features
+                        turn personal sustainability into a collective movement.
                       </p>
                     </div>
                   </div>
@@ -270,125 +316,19 @@
       <!-- Features list -->
       <div class="grid gap-8 md:grid-cols-3 md:gap-12">
         <!-- Feature -->
-        <div>
-          <div class="mb-1 flex items-center space-x-2">
-            <svg
-              class="fill-slate-300 shrink-0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-            >
-              <path
-                d="M7.999 2.34a4.733 4.733 0 0 0-6.604 6.778l5.904 5.762a1 1 0 0 0 1.4 0l5.915-5.77a4.733 4.733 0 0 0-6.615-6.77Zm5.208 5.348-5.208 5.079-5.2-5.07a2.734 2.734 0 0 1 3.867-3.864c.182.19.335.404.455.638a1.04 1.04 0 0 0 1.756 0 2.724 2.724 0 0 1 5.122 1.294 2.7 2.7 0 0 1-.792 1.923Z"
-              ></path>
-            </svg>
-            <h4 class="font-medium text-slate-50">Filters</h4>
-          </div>
-          <p class="text-sm text-slate-400">
-            Login box must find the right balance for the user convenience,
-            privacy and security.
-          </p>
-        </div>
-        <!-- Feature -->
-        <div>
-          <div class="mb-1 flex items-center space-x-2">
-            <svg
-              class="fill-slate-300 shrink-0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-            >
-              <path
-                d="M11 0c1.3 0 2.6.5 3.5 1.5 1 .9 1.5 2.2 1.5 3.5 0 1.3-.5 2.6-1.4 3.5l-1.2 1.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.1-1.2c.6-.5.9-1.3.9-2.1s-.3-1.6-.9-2.2C12 1.7 10 1.7 8.9 2.8L7.7 4c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l1.2-1.1C8.4.5 9.7 0 11 0ZM8.3 12c.4-.4 1-.5 1.4-.1.4.4.4 1 0 1.4l-1.2 1.2C7.6 15.5 6.3 16 5 16c-1.3 0-2.6-.5-3.5-1.5C.5 13.6 0 12.3 0 11c0-1.3.5-2.6 1.5-3.5l1.1-1.2c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L2.9 8.9c-.6.5-.9 1.3-.9 2.1s.3 1.6.9 2.2c1.1 1.1 3.1 1.1 4.2 0L8.3 12Zm1.1-6.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-4.2 4.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l4.2-4.2Z"
-              ></path>
-            </svg>
-            <h4 class="font-medium text-slate-50">Configurable</h4>
-          </div>
-          <p class="text-sm text-slate-400">
-            Login box must find the right balance for the user convenience,
-            privacy and security.
-          </p>
-        </div>
-        <!-- Feature -->
-        <div>
-          <div class="mb-1 flex items-center space-x-2">
-            <svg
-              class="fill-slate-300 shrink-0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-            >
-              <path
-                d="M14 0a2 2 0 0 1 2 2v4a1 1 0 0 1-2 0V2H2v12h4a1 1 0 0 1 0 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12Zm-1.957 10.629 3.664 3.664a1 1 0 0 1-1.414 1.414l-3.664-3.664-.644 2.578a.5.5 0 0 1-.476.379H9.5a.5.5 0 0 1-.48-.362l-2-7a.5.5 0 0 1 .618-.618l7 2a.5.5 0 0 1-.017.965l-2.578.644Z"
-              ></path>
-            </svg>
-            <h4 class="font-medium text-slate-50">Adaptable</h4>
-          </div>
-          <p class="text-sm text-slate-400">
-            Login box must find the right balance for the user convenience,
-            privacy and security.
-          </p>
-        </div>
-        <!-- Feature -->
-        <div>
-          <div class="mb-1 flex items-center space-x-2">
-            <svg
-              class="fill-slate-300 shrink-0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-            >
-              <path
-                d="M14.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-8 8c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l8-8ZM15 7c.6 0 1 .4 1 1 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c.6 0 1 .4 1 1s-.4 1-1 1C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6c0-.6.4-1 1-1Z"
-              ></path>
-            </svg>
-            <h4 class="font-medium text-slate-50">Authorization</h4>
-          </div>
-          <p class="text-sm text-slate-400">
-            Login box must find the right balance for the user convenience,
-            privacy and security.
-          </p>
-        </div>
-        <!-- Feature -->
-        <div>
-          <div class="mb-1 flex items-center space-x-2">
-            <svg
-              class="fill-slate-300 shrink-0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-            >
-              <path
-                d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12Zm0 14V2H2v12h12Zm-3-7H5a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2Zm0 4H5a1 1 0 0 1 0-2h6a1 1 0 0 1 0 2Z"
-              ></path>
-            </svg>
-            <h4 class="font-medium text-slate-50">Management</h4>
-          </div>
-          <p class="text-sm text-slate-400">
-            Login box must find the right balance for the user convenience,
-            privacy and security.
-          </p>
-        </div>
-        <!-- Feature -->
-        <div>
-          <div class="mb-1 flex items-center space-x-2">
-            <svg
-              class="fill-slate-300 shrink-0"
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-            >
-              <path
-                d="M14.574 5.67a13.292 13.292 0 0 1 1.298 1.842 1 1 0 0 1 0 .98C15.743 8.716 12.706 14 8 14a6.391 6.391 0 0 1-1.557-.2l1.815-1.815C10.97 11.82 13.06 9.13 13.82 8c-.163-.243-.39-.56-.669-.907l1.424-1.424ZM.294 15.706a.999.999 0 0 1-.002-1.413l2.53-2.529C1.171 10.291.197 8.615.127 8.49a.998.998 0 0 1-.002-.975C.251 7.29 3.246 2 8 2c1.331 0 2.515.431 3.548 1.038L14.293.293a.999.999 0 1 1 1.414 1.414l-14 14a.997.997 0 0 1-1.414 0ZM2.18 8a12.603 12.603 0 0 0 2.06 2.347l1.833-1.834A1.925 1.925 0 0 1 6 8a2 2 0 0 1 2-2c.178 0 .348.03.512.074l1.566-1.566C9.438 4.201 8.742 4 8 4 5.146 4 2.958 6.835 2.181 8Z"
-              ></path>
-            </svg>
-            <h4 class="font-medium text-slate-50">Building</h4>
-          </div>
-          <p class="text-sm text-slate-400">
-            Login box must find the right balance for the user convenience,
-            privacy and security.
-          </p>
-        </div>
+        {
+          sixlists.map((item) => (
+            <div>
+              <div class="mb-1 flex items-center space-x-2">
+                <span class="fill-slate-300 text-2xl shrink-0">
+                  {item.icon}
+                </span>
+                <h4 class="font-medium text-slate-50">{item.name}</h4>
+              </div>
+              <p class="text-sm text-slate-400">{item.description}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>

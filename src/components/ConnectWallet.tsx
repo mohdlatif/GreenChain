@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import freighterApi from '@stellar/freighter-api'
 
+import { $userStore } from '@clerk/astro/client'
+import { useSyncExternalStore } from 'react'
+
 export default function AccountButton() {
   const [isConnected, setIsConnected] = useState(false)
   const [publicKey, setPublicKey] = useState('')
@@ -86,13 +89,21 @@ export default function AccountButton() {
     }
   }
 
+  const user = useSyncExternalStore(
+    $userStore.listen,
+    $userStore.get,
+    $userStore.get,
+  )
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        className="btn-sm group relative w-full text-slate-300 transition duration-150 ease-in-out [background:linear-gradient(theme(colors.slate.900),_theme(colors.slate.900))_padding-box,_conic-gradient(theme(colors.slate.400),_theme(colors.slate.700)_25%,_theme(colors.slate.700)_75%,_theme(colors.slate.400)_100%)_border-box] before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-slate-800/30 hover:text-white"
+        className="btn-sm group relative min-h-[31.6px] w-full min-w-[82.1667px] text-slate-300 transition duration-150 ease-in-out [background:linear-gradient(theme(colors.slate.900),_theme(colors.slate.900))_padding-box,_conic-gradient(theme(colors.slate.400),_theme(colors.slate.700)_25%,_theme(colors.slate.700)_75%,_theme(colors.slate.400)_100%)_border-box] before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:bg-slate-800/30 hover:text-white"
         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
       >
-        <span className="relative">Account</span>
+        <span className="relative">
+          {isLoggedIn ? user?.firstName : 'Account'}
+        </span>
         <span
           className={`relative ml-2 size-2 rounded-full transition-transform duration-150 ease-in-out group-hover:translate-x-0.5 ${
             isConnected ? 'bg-green-300/80' : 'bg-red-300/80'

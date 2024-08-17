@@ -14,6 +14,7 @@
     "alpinejs": "^3.14.1",
     "aos": "^2.3.4",
     "astro": "^4.13.4",
+    "astro-icon": "^1.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "swiper": "^11.1.9",
@@ -83,7 +84,7 @@
       "prettier --write"
     ]
   },
-  "name": "greenchain",
+  "name": "ecoledger",
   "scripts": {
     "astro": "astro",
     "build": "astro build",
