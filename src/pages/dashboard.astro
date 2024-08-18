@@ -2,8 +2,6 @@
 import { ThemeModeScript } from 'flowbite-react'
 
 import Layout from '@/layouts/Layout.astro'
-
-import { Form } from '@components/Form.client.tsx'
 ---
 
 <Layout title="Dashboard">
@@ -39,11 +37,10 @@ import { Form } from '@components/Form.client.tsx'
         <div class="mx-auto max-w-3xl text-center">
           <h1 class="mb-4 text-3xl font-bold">Sustainable Action</h1>
           <div class="mx-auto mb-6" data-aos="fade-down">
-            <Form client:load />
             <div
               class="relative inline-flex before:absolute before:inset-0 before:bg-purple-500 before:blur-md"
             >
-              Form
+              View all data and vote for members
             </div>
           </div>
         </div>
