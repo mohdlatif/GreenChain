@@ -1,0 +1,88 @@
+---
+import { ThemeModeScript } from 'flowbite-react'
+
+import Layout from '@/layouts/Layout.astro'
+
+import { Form } from '@components/Form.client.tsx'
+
+import { logAction } from '@/libs/contract.ts'
+
+console.log('---------------------------')
+console.log('logAction:')
+for (const [key, value] of Object.entries(await logAction)) {
+  console.log(`${key}: ${value}`)
+}
+console.log('---------------------------')
+---
+
+<Layout title="Log Your Sustainable Action">
+  <!-- Hero -->
+  <section class="relative">
+    <!-- Radial gradient -->
+    <div
+      class="pointer-events-none absolute left-1/2 top-0 -z-10 flex aspect-square w-[800px] -translate-x-1/2 -translate-y-1/2 items-center justify-center"
+      aria-hidden="true"
+    >
+      <div
+        class="translate-z-0 absolute inset-0 rounded-full bg-purple-500 opacity-30 blur-[120px]"
+      >
+      </div>
+      <div
+        class="translate-z-0 absolute size-64 rounded-full bg-purple-400 opacity-70 blur-[80px]"
+      >
+      </div>
+    </div>
+
+    <!-- Particles animation -->
+    <div class="absolute inset-0 -z-10 h-96" aria-hidden="true">
+      <canvas data-particle-animation data-particle-quantity="15"></canvas>
+    </div>
+
+    <!-- Illustration -->
+    <div
+      class="pointer-events-none absolute left-1/2 -z-10 -mt-16 -translate-x-1/2 opacity-90 blur-2xl md:block"
+      aria-hidden="true"
+    >
+      <img
+        src="./images/page-illustration.svg"
+        class="max-w-none"
+        width="1440"
+        height="427"
+        alt="Page Illustration"
+      />
+    </div>
+
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="pb-10 pt-32 md:pt-40">
+        <!-- Hero content -->
+        <div class="text-center">
+          <div
+            class="inline-flex bg-gradient-to-r from-purple-500 to-purple-200 bg-clip-text pb-3 font-medium text-transparent"
+          >
+            Log Your Sustainable Action
+          </div>
+          <h1
+            class="h1 bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 bg-clip-text pb-6 text-transparent"
+          >
+            Make Your Impact Count
+          </h1>
+          <!-- Rings illustration -->
+          <div
+            class="relative inline-flex w-full max-w-md items-center justify-center"
+          >
+            <!-- Particles animation -->
+            <div class="absolute inset-0 -z-10" aria-hidden="true">
+              <canvas data-particle-animation data-particle-quantity="10"
+              ></canvas>
+            </div>
+            <div class="inline-flex w-full">
+              <Form client:load />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ThemeModeScript />
+</Layout>

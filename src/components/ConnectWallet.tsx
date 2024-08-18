@@ -136,6 +136,13 @@ export const AccountButton = () => {
                 >
                   Dashboard
                 </a>
+
+                <a
+                  href="/log-action"
+                  className="block w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white"
+                >
+                  Log Action
+                </a>
                 <button
                   className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white"
                   onClick={handleLogout}

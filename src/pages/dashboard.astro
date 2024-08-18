@@ -1,8 +1,54 @@
 ---
-// import { Protect } from '@clerk/astro/components'
+import { ThemeModeScript } from 'flowbite-react'
+
+import Layout from '@/layouts/Layout.astro'
+
+import { Form } from '@components/Form.client.tsx'
 ---
 
-<!-- <Protect permission="org:invoices:create">
-  <p slot="fallback">You do not have the permissions to create an invoice.</p>
-  <slot />
-</Protect> -->Dashboard
+<Layout title="Dashboard">
+  <!-- Hero -->
+  <section>
+    <div class="relative mx-auto max-w-6xl px-4 sm:px-6">
+      <!-- Particles animation -->
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <canvas
+          data-particle-animation
+          data-particle-quantity="8"
+          data-particle-staticity="30"></canvas>
+      </div>
+
+      <!-- Illustration -->
+      <div
+        class="pointer-events-none absolute inset-0 -z-10 -mx-28 overflow-hidden rounded-b-[3rem]"
+        aria-hidden="true"
+      >
+        <div class="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2">
+          <img
+            src="./images/glow-bottom.svg"
+            class="max-w-none"
+            width="2146"
+            height="774"
+            alt="Hero Illustration"
+          />
+        </div>
+      </div>
+
+      <div class="min-h-screen pb-16 pt-32 md:pb-32 md:pt-52">
+        <!-- Hero content -->
+        <div class="mx-auto max-w-3xl text-center">
+          <h1 class="mb-4 text-3xl font-bold">Sustainable Action</h1>
+          <div class="mx-auto mb-6" data-aos="fade-down">
+            <Form client:load />
+            <div
+              class="relative inline-flex before:absolute before:inset-0 before:bg-purple-500 before:blur-md"
+            >
+              Form
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <ThemeModeScript />
+</Layout>

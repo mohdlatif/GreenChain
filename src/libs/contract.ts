@@ -1,7 +1,7 @@
 import { Keypair, TransactionBuilder } from '@stellar/stellar-sdk'
-
+import stellar from '@stellar/typescript-wallet-sdk'
 import { Spec, Client } from '@stellar/stellar-sdk/contract'
-
+import { Server } from '@stellar/stellar-sdk/rpc'
 const rpc_url = 'https://soroban-testnet.stellar.org:443'
 const network_passphrase = 'Test SDF Network ; September 2015'
 const CONTRACT_ID = import.meta.env.PUBLIC_CONTRACT_ID
@@ -24,6 +24,19 @@ const client = new Client(contractSpec, {
   rpcUrl: rpc_url,
 })
 
-export const test = () => {
-  const contractId = keypair.publicKey()
+export const logAction = async (
+  user: string,
+  action: string,
+  impact: number,
+) => {
+  try {
+    const tx = await client('log_action', { action, impact, user })
+    const result = contractSpec.funcResToNative('log_action', tx.result.retval)
+    console.log('Action logged:', result)
+
+    return result
+  } catch (error) {
+    console.error('Error logging action:', error)
+    throw error
+  }
 }

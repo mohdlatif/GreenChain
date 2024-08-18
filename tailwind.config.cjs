@@ -4,12 +4,16 @@ import { extract } from 'fluid-tailwind'
 import fluid from 'fluid-tailwind'
 import plugin from 'tailwindcss/plugin'
 import twReset from 'tw-reset'
+import flowbite from 'flowbite-react/tailwind'
 
 /* eslint-disable sort-keys-plus/sort-keys */
 export default {
   content: {
     extract,
-    files: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+    files: [
+      './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+      flowbite.content(),
+    ],
   },
   corePlugins: {},
   darkMode: 'class',
@@ -33,6 +37,7 @@ export default {
     fluid,
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    flowbite.plugin(),
   ],
   presets: [twReset],
   theme: {
