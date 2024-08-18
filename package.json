@@ -6,8 +6,10 @@
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vercel": "^7.7.2",
     "@clerk/astro": "^1.0.12",
+    "@soroban-react/core": "^9.1.13",
     "@stellar/freighter-api": "^3.0.0",
     "@stellar/stellar-sdk": "^12.2.0",
+    "@stellar/typescript-wallet-sdk": "^1.7.0",
     "@types/alpinejs": "^3.13.10",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -105,5 +107,5 @@
     "typecheck": "tsc"
   },
   "type": "module",
-  "version": "0.0.1"
+  "version": "1.0.0"
 }

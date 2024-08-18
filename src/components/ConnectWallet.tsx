@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
-import freighterApi from '@stellar/freighter-api'
-
 import { $userStore } from '@clerk/astro/client'
 import { useSyncExternalStore } from 'react'
+import freighterApi from '@stellar/freighter-api'
 
-export default function AccountButton() {
+// export default function AccountButton()
+
+export const AccountButton = () => {
   const [isConnected, setIsConnected] = useState(false)
   const [publicKey, setPublicKey] = useState('')
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -51,7 +52,7 @@ export default function AccountButton() {
   const handleConnect = async () => {
     if (!isConnected) {
       try {
-        console.log('Connecting to Freighter...')
+        console.log('Freighter is installed...')
         const { isConnected } = await freighterApi.isConnected()
         if (!isConnected) {
           console.error('Freighter is not installed')
@@ -69,13 +70,12 @@ export default function AccountButton() {
   }
 
   const handleLogout = () => {
-    // Your logout logic here
-
     const signOutButton = document.querySelector('#sign-out') as HTMLElement
     if (signOutButton) {
       signOutButton.click()
     }
-
+    // could not find a way to signout from wallet
+    // https://github.com/stellar/freighter/issues/943
     setIsConnected(false)
     setPublicKey('')
   }
@@ -129,12 +129,20 @@ export default function AccountButton() {
               </>
             )}
             {isLoggedIn && (
-              <button
-                className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white"
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
+              <>
+                <a
+                  href="/dashboard"
+                  className="block w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white"
+                >
+                  Dashboard
+                </a>
+                <button
+                  className="w-full rounded p-2 text-left hover:bg-purple-600/30 hover:text-white"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </button>
+              </>
             )}
             <hr className="border-slate-600" />
             <button

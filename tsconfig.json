@@ -6,19 +6,33 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "module": "ES2022",
+    "module": "NodeNext",
     // Enable node-style module resolution, for things like npm package imports.
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     // Astro will directly run your TypeScript code, no transpilation needed.
     "noEmit": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@img/*": ["public/img/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@pages/*": ["src/pages/*"],
-      "~/*": ["./*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@img/*": [
+        "public/img/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "~/*": [
+        "./*"
+      ]
     },
     "plugins": [
       {
@@ -30,10 +44,19 @@
     "strictNullChecks": true,
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
-    "types": ["unplugin-fonts/client"]
+    "types": [
+      "unplugin-fonts/client"
+    ]
   },
-  "exclude": ["*/node_modules/*", ".vscode", "dist", "node_modules"],
-  "extends": ["astro/tsconfigs/strict"],
+  "exclude": [
+    "*/node_modules/*",
+    ".vscode",
+    "dist",
+    "node_modules"
+  ],
+  "extends": [
+    "astro/tsconfigs/strict"
+  ],
   "include": [
     "**/*.ts",
     "**/*.tsx",
