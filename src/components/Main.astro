@@ -8,12 +8,14 @@ import Features from '@components/Features.astro'
 import Feature2 from '@components/Features2.astro'
 import Feature3 from '@components/Features3.astro'
 import Feature4 from '@components/Features4.astro'
+
+import { test } from '@/libs/contract.ts'
 ---
 
 <!-- Page content -->
 <main class="grow">
   <Hero />
-
+  {test}
   <Clients />
 
   <!-- Features -->
