@@ -26,8 +26,4 @@ const client = new Client(contractSpec, {
 
 export const test = () => {
   const contractId = keypair.publicKey()
-
-  return contractId
 }
-
-console.log(new Date(), 'Operater Public Key:', keypair.publicKey())
