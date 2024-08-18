@@ -90,7 +90,7 @@ export default tseslint.config(
     rules: {
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'off',
         {
           argsIgnorePattern: '^_',
           destructuredArrayIgnorePattern: '^_',
@@ -215,7 +215,7 @@ export default tseslint.config(
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/no-require-imports': 'off',
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'off',
         {
           args: 'all',
           argsIgnorePattern: '^_',
@@ -255,7 +255,7 @@ export default tseslint.config(
       'tailwindcss/no-custom-classname': 'warn',
       'typescript-sort-keys/interface': 'warn',
       'typescript-sort-keys/string-enum': 'warn',
-      'unused-imports/no-unused-imports': 'warn',
+      'unused-imports/no-unused-imports': 'off',
       'unused-imports/no-unused-vars': 'off',
     },
   },

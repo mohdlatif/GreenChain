@@ -1,10 +1,9 @@
 {
   "generators": {
-    "address": 2,
+    "address": 1,
     "nonce": 0
   },
   "auth": [
-    [],
     [],
     []
   ],
@@ -18,58 +17,6 @@
     "min_temp_entry_ttl": 16,
     "max_entry_ttl": 6312000,
     "ledger_entries": [
-      [
-        {
-          "contract_data": {
-            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
-            "key": {
-              "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
-            },
-            "durability": "persistent"
-          }
-        },
-        [
-          {
-            "last_modified_ledger_seq": 0,
-            "data": {
-              "contract_data": {
-                "ext": "v0",
-                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
-                "key": {
-                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
-                },
-                "durability": "persistent",
-                "val": {
-                  "vec": [
-                    {
-                      "vec": [
-                        {
-                          "string": "Recycling"
-                        },
-                        {
-                          "u32": 10
-                        }
-                      ]
-                    },
-                    {
-                      "vec": [
-                        {
-                          "string": "Using public transport"
-                        },
-                        {
-                          "u32": 20
-                        }
-                      ]
-                    }
-                  ]
-                }
-              }
-            },
-            "ext": "v0"
-          },
-          4095
-        ]
-      ],
       [
         {
           "contract_data": {
@@ -98,7 +45,7 @@
                           "symbol": "t_impact"
                         },
                         "val": {
-                          "u32": 30
+                          "u32": 0
                         }
                       }
                     ]
@@ -150,22 +97,10 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
               },
               {
-                "symbol": "log_action"
+                "symbol": "initialize"
               }
             ],
-            "data": {
-              "vec": [
-                {
-                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
-                },
-                {
-                  "string": "Recycling"
-                },
-                {
-                  "u32": 10
-                }
-              ]
-            }
+            "data": "void"
           }
         }
       },
@@ -183,12 +118,10 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "log_action"
+                "symbol": "initialize"
               }
             ],
-            "data": {
-              "u32": 10
-            }
+            "data": "void"
           }
         }
       },
@@ -209,22 +142,10 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
               },
               {
-                "symbol": "log_action"
+                "symbol": "get_total_impact"
               }
             ],
-            "data": {
-              "vec": [
-                {
-                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
-                },
-                {
-                  "string": "Using public transport"
-                },
-                {
-                  "u32": 20
-                }
-              ]
-            }
+            "data": "void"
           }
         }
       },
@@ -242,60 +163,11 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "log_action"
+                "symbol": "get_total_impact"
               }
             ],
             "data": {
-              "u32": 30
-            }
-          }
-        }
-      },
-      "failed_call": false
-    },
-    {
-      "event": {
-        "ext": "v0",
-        "contract_id": null,
-        "type_": "diagnostic",
-        "body": {
-          "v0": {
-            "topics": [
-              {
-                "symbol": "fn_call"
-              },
-              {
-                "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
-              },
-              {
-                "symbol": "get_user_score"
-              }
-            ],
-            "data": {
-              "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
-            }
-          }
-        }
-      },
-      "failed_call": false
-    },
-    {
-      "event": {
-        "ext": "v0",
-        "contract_id": "0000000000000000000000000000000000000000000000000000000000000001",
-        "type_": "diagnostic",
-        "body": {
-          "v0": {
-            "topics": [
-              {
-                "symbol": "fn_return"
-              },
-              {
-                "symbol": "get_user_score"
-              }
-            ],
-            "data": {
-              "u32": 30
+              "u32": 0
             }
           }
         }
